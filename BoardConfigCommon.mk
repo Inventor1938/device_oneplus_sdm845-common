@@ -61,9 +61,6 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 # Treble
 BOARD_VNDK_VERSION := current
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
-
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
 
@@ -80,10 +77,6 @@ WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
 
 # Display
 TARGET_USES_HWC2 := true
-
-# Lineage Hardware
-JAVA_SOURCE_OVERLAYS := \
-    org.lineageos.hardware|$(COMMON_PATH)/lineagehw|**/*.java
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864

@@ -19,8 +19,7 @@ $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
@@ -43,10 +42,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService
-
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default
@@ -58,10 +53,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc \
@@ -72,12 +63,8 @@ PRODUCT_PACKAGES += \
     libvulkan
 
 # Doze
-PRODUCT_PACKAGES += \
-    OnePlusDoze
-
-# HotwordEnrollement app permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
+#PRODUCT_PACKAGES += \
+#    OnePlusDoze
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -107,10 +94,6 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     com.android.nfc_extras
-
-# Pocket mode
-PRODUCT_PACKAGES += \
-    OnePlusPocketMode
 
 # Power
 PRODUCT_PACKAGES += \
